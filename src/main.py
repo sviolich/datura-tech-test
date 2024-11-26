@@ -1,5 +1,7 @@
 import re
 
+# TODO add file handling to main, so file can be
+#   specified as an argument.
 # def main(a, b):
 #     c = add(a, b)
 #     print(c)

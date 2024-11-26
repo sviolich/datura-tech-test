@@ -21,3 +21,7 @@ def test_word_count():
         'file': 1,
         'python': 1
     }
+
+
+# TODO break cleaning operations into small helper functions
+#   and test them all here.
