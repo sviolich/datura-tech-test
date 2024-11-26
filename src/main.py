@@ -12,13 +12,11 @@ import re
 def word_count(text):
     counts = {}
 
-    # TODO strip punctuation/special chars
+    # strip leading/trailing whitespace
+    text = text.strip()
 
     # force lowercase
     text = text.lower()
-
-    # strip leading/trailing whitespace
-    text = text.strip()
 
     # replace any whitespace with single spaces
     text = re.sub(r"\s+", " ", text)
@@ -27,6 +25,10 @@ def word_count(text):
     words = text.split(" ")
 
     for word in words:
+        # strip non-alphanumeric chars
+        # TODO strip underscores
+        word = re.sub(r"\W", "", word)
+
         if word not in counts:
             counts[word] = 1
         else:
